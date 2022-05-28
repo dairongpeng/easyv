@@ -1,3 +1,4 @@
+/* 
 .App {
   text-align: center;
 }
@@ -35,4 +36,21 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.list li {
+  width: 300px;
+  margin: 50px 10px;
+  text-align: center;
+}
+
+.list li img {
+  width: 100px;
+  height: 100ox;
 }
