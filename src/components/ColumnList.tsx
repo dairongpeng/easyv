@@ -49,6 +49,10 @@ class ColumnList extends React.Component<ColumnProps, State> {
     handlerClick(event: any) {
         this.setState({count: 2});
         console.log(this.state.count);
+        // 触发事件的对象
+        console.log(event.target);
+        // 添加监听事件的对象
+        console.log(event.currentTarget);
     }
 
     render() {
