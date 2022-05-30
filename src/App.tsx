@@ -25,6 +25,12 @@ const App:React.FC = function() {
       <p>{userData.map((user: any) => <span>{user.name}</span>)}</p>
       <p>you clicked {count} times</p>
       <button onClick={() => {setCount(count + 1)}}>click me</button>
+      <ul className = "styles.list">
+        {dataList.map((l) => (
+          // 调用子组件
+          <ColumnList title={l.title} url={l.url} description = {l.description}/>
+        ))}
+      </ul>
     </div>
   )
 }

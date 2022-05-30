@@ -4,12 +4,32 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// 创建一个value类型的值
+const defaultValue = {
+  userName: "dairongpeng"
+}
+
+// 把defaultValue传递给react的context。数据的提供者。
+// 消费者是使用这个数据的子组件。export不要遗漏
+export const appContext = React.createContext(defaultValue);
+
+// const root = ReactDOM.createRoot(
+//   document.getElementById('root') as HTMLElement
+// );
+// root.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+// );
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    {/* 使用appContext.Provider包裹<App/>。借助value参数把defaultValue传递到子组件App中去 */}
+    <appContext.Provider value={defaultValue}>
+      <App />
+    </appContext.Provider>
   </React.StrictMode>
 );
 
